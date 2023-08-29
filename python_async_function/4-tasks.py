@@ -3,7 +3,7 @@
 
 from asyncio import as_completed
 from typing import List
-waitom = __import__('3-tasks.py').task_wait_random
+waitom = __import__('3-tasks').task_wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
