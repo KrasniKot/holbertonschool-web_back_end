@@ -6,7 +6,7 @@ from typing import List
 waitom = __import__('3-tasks').task_wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """Returns a list of all the delays"""
 
     dlays = []
