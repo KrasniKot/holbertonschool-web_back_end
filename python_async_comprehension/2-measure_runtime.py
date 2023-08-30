@@ -9,6 +9,7 @@ asco = __import__('1-async_comprehension').async_comprehension
 async def measure_runtime() -> float:
     """Returns 10 random numbers"""
     begin = time()
-    await asyncio.gather(asco(), asco(), asco(), asco())
+    tasks = [asco() for i in range(4)]
+    await asyncio.gather(*tasks)
     end = time()
     return end - begin
