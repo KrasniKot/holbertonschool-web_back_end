@@ -6,7 +6,7 @@ from typing import Mapping, TypeVar, Any, Union
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, Any] = None)\
+def safely_get_value(dct: Mapping, key: Any, default: Union[T, None] = None)\
         -> Union[Any, T]:
     """Returns the first element of a dictionary"""
     if key in dct:
