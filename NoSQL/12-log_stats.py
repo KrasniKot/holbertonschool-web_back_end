@@ -15,6 +15,6 @@ if __name__ == "__main__":
     print("Methods:")
 
     for m in method:
-        print(f"\t{m}: {coll.count_documents({'method': m})}")
+        print(f"\tmethod {m}: {coll.count_documents({'method': m})}")
 
     print(coll.count_documents({"method": "GET", "path": "/status"}))
