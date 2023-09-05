@@ -17,4 +17,5 @@ if __name__ == "__main__":
     for m in method:
         print(f"\tmethod {m}: {coll.count_documents({'method': m})}")
 
-    print(coll.count_documents({"method": "GET", "path": "/status"}))
+    print(str(coll.count_documents({"method": "GET", "path": "/status"}))\
+            + " status check")
