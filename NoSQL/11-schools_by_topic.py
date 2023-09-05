@@ -1,4 +1,4 @@
-#!/usr/bin/envn python3
+#!/usr/bin/env python3
 """This module contains schools_by_topic()"""
 
 
