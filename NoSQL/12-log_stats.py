@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     method = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
-    print(coll.count_documents({}))
+    print(f"{coll.count_documents({})} logs")
     print("Methods:")
 
     for m in method:
