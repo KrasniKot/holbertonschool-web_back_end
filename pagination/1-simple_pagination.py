@@ -31,6 +31,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """Returns the correspondent rows in list format"""
         assert type(page) == int and type(page_size) == int
         assert 0 < page and 0 < page_size
 
