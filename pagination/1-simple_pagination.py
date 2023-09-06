@@ -45,3 +45,12 @@ class Server:
                     lines.append(row.strip().split(","))
 
         return lines
+
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        """
+        Returns a dictionary containing:
+        the prev, next, and current page
+        """
+        rdict = {}
+        rdict["page_size"] = len(get_page(page, page_size))
+        return rdict
