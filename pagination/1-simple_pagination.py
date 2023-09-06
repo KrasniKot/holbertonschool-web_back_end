@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """This module ???"""
 
-# import ???
 import csv
 import math
 from typing import List, Tuple
@@ -32,4 +31,16 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        pass
+        assert type(page) == int and type(page_size) == int
+        assert 0 < page and 0 < page_size
+
+        lines = []
+
+        with open("Popular_Baby_Names.csv", "r") as f:
+            r = index_range(page, page_size)
+
+            for idx, row in enumerate(f):
+                if idx in range(r[0] + 1, r[1] + 1):
+                    lines.append(row.strip().split(","))
+
+        return lines
