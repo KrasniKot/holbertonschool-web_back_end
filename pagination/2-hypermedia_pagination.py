@@ -3,6 +3,7 @@
 
 import csv
 import math
+from math import ceil
 from typing import List, Tuple
 
 
@@ -50,14 +51,14 @@ class Server:
         """Returns a dictionary containing some hypermedia"""
         dictt = {}
 
-        len_page = len(self.get_page(page, page_size))
+        len_page = len(self.dataset())
         total = ceil(len_page / page_size)
 
         dictt["page_size"] = page_size
         dictt["page"] = page
         dictt["data"] = self.get_page(page, page_size)
-        dictt["next_page"] = page + 1 if page + 1 <= len_page
-        dictt["prev_page"] = page - 1 if page - 1 >= 1 else None
+        dictt["next_page"] = (page + 1) if (page + 1) <= total else None
+        dictt["prev_page"] = (page - 1) if (page - 1) >= 1 else None
         dictt["total_pages"] = total
 
         return dictt
