@@ -45,3 +45,19 @@ class Server:
                     lines.append(row.strip().split(","))
 
         return lines
+
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        """Returns a dictionary containing some hypermedia"""
+        dictt = {}
+
+        len_page = len(self.get_page(page, page_size))
+        total = ceil(len_page / page_size)
+
+        dictt["page_size"] = page_size
+        dictt["page"] = page
+        dictt["data"] = self.get_page(page, page_size)
+        dictt["next_page"] = page + 1 if page + 1 <= len_page
+        dictt["prev_page"] = page - 1 if page - 1 >= 1 else None
+        dictt["total_pages"] = total
+
+        return dictt
