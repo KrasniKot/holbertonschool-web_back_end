@@ -6,5 +6,5 @@ export default function createReportObject(employeesList) {
     },
   };
 
-  return report
+  return report;
 }
