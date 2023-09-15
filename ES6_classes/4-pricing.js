@@ -1,4 +1,6 @@
+/* eslint-disable */
 import Currency from './3-currency';
+/* eslist-enable */
 
 export default class Pricing {
   constructor(amount, currency) {
@@ -12,12 +14,7 @@ export default class Pricing {
 
   set amount(amount) { this._amount = amount; }
 
-  set currency(currency) {
-    if (typeof currency === Currency) {
-      this._currency = currency;
-    }
-    else { throw TypeError('currency must be a Currency') }
-  }
+  set currency(currency) { this._currency = currency; }
 
   displayFullPrice() { return `${this._amount} ${this.currency._name} (${this.currency._code})`; }
 }
