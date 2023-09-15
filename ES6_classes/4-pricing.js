@@ -17,4 +17,6 @@ export default class Pricing {
   set currency(currency) { this._currency = currency; }
 
   displayFullPrice() { return `${this._amount} ${this.currency._name} (${this.currency._code})`; }
+
+  static convertPrice(amount, conversionRate) { return amount * conversionRate}
 }
