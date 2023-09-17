@@ -1,0 +1,27 @@
+
+function createEmployeesObject(departmentName, employees) {
+  return { [departmentName]: employees };
+}
+function createReportObject(employeesList) {
+  const report = {
+    allEmployees: employeesList,
+    getNumberOfDepartments(employeesList) {
+      return Object.keys(employeesList).length;
+    },
+  };
+
+  return report;
+}
+
+function createIteratorObject(report) {
+  empList = [];
+
+  for (dep in report["allEmployees"]) {
+    for (emp of report["allEmployees"][dep]) { empList.push(emp); }
+  }
+  return empList;
+}
+
+// FUNCTION
+// MAIN
+
