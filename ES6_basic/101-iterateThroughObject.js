@@ -1,10 +1,14 @@
 export default function iterateThroughObject(reportWithIterator) {
-  let empray = "";
+  let empray = '';
 
-  for (let emp of reportWithIterator) {
+  for (const emp of reportWithIterator) {
     empray += emp;
-    empray += " | ";
+    empray += ' | ';
   }
 
-  return empray.slice(0, -3);
+  if (empray.length > 0) {
+    empray = empray.slice(0, -3);
+  }
+
+  return empray;
 }
