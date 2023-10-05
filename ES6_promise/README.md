@@ -51,3 +51,12 @@ Write and export a function named `handleProfileSignup`. It should accept three 
 ### Task 7: Load balancer
 Write and export a function named `loadBalancer`. It should accept two arguments `chinaDownload` (Promise) and `USDownload` (Promise).
 The function should return the value returned by the promise that resolved the first.
+
+### Task 8: Throw error / try catch
+Write a function named `divideFunction` that will accept two arguments: `numerator` (Number) and `denominator` (Number).
+When the `denominator` argument is equal to 0, the function should throw a new error with the message `cannot divide by 0`. Otherwise it should return the numerator divided by the denominator.
+
+### Task 9: Throw an error
+Write a function named `guardrail` that will accept one argument `mathFunction` (Function).
+This function should create and return an array named `queue`.
+When the `mathFunction` function is executed, the value returned by the function should be appended to the queue. If this function throws an error, the error message should be appended to the queue. In every case, the message `Guardrail was processed` should be added to the queue.
