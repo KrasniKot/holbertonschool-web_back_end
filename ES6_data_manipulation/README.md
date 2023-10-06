@@ -36,7 +36,14 @@ If a student doesn’t have grade in newGrades, the final grade should be `N/A`.
 You must use `filter` and `map` combined.
 
 ### Task 5 Typed Arrays:
+Create a function named `createInt8TypedArray` that returns a new `ArrayBuffer` with an `Int8` value at a specific position.  
+It should accept three arguments: `length` (Number), `position` (Number), and `value` (Number).  
+If adding the value is not possible the error `Position outside` range should be thrown.
+
 ### Task 6 Set data structure:
+Create a function named `setFromArray` that returns a `Set` from an array.
+It accepts an argument (Array, of any kind of element).
+
 ### Task 7 More set data structure:
 ### Task 8 Clean set:
 ### Task 9 Map data structure:
